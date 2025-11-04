@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "external_link_types",
+  "info": {
+    "singularName": "external-link-type",
+    "pluralName": "external-link-types",
+    "displayName": "Tipologie link esterni"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "externals": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::external-link.external-link",
+      "mappedBy": "types"
+    }
+  }
+}
