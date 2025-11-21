@@ -51,6 +51,10 @@
       "relation": "manyToMany",
       "target": "api::tag.tag",
       "inversedBy": "articles"
+    },
+    "highlight": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
