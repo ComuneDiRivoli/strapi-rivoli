@@ -7,7 +7,9 @@ export interface SharedMedia extends Struct.ComponentSchema {
     icon: 'file-video';
   };
   attributes: {
+    category: Schema.Attribute.Relation<'oneToOne', 'api::category.category'>;
     file: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
+    tags: Schema.Attribute.Relation<'oneToMany', 'api::tag.tag'>;
   };
 }
 
