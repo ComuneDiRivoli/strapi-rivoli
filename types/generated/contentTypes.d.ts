@@ -466,7 +466,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     singularName: 'article';
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
   };
   attributes: {
     attachments: Schema.Attribute.Media<
@@ -604,7 +604,7 @@ export interface ApiEmployeeEmployee extends Struct.CollectionTypeSchema {
     singularName: 'employee';
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
   };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
