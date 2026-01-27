@@ -624,7 +624,7 @@ export interface ApiEmployeeEmployee extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     name: Schema.Attribute.String & Schema.Attribute.Required;
-    office: Schema.Attribute.Relation<'manyToOne', 'api::office.office'>;
+    offices: Schema.Attribute.Relation<'manyToMany', 'api::office.office'>;
     phone: Schema.Attribute.String;
     phone2: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
@@ -756,7 +756,10 @@ export interface ApiOfficeOffice extends Struct.CollectionTypeSchema {
       'manyToOne',
       'api::department.department'
     >;
-    employees: Schema.Attribute.Relation<'oneToMany', 'api::employee.employee'>;
+    employees: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::employee.employee'
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

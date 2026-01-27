@@ -23,9 +23,9 @@
     },
     "employees": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "api::employee.employee",
-      "mappedBy": "office"
+      "mappedBy": "offices"
     }
   }
 }

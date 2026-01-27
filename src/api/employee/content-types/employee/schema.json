@@ -44,9 +44,9 @@
       "target": "api::service.service",
       "inversedBy": "employees"
     },
-    "office": {
+    "offices": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::office.office",
       "inversedBy": "employees"
     },
